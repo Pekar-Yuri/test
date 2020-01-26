@@ -1,0 +1,16 @@
+<nav>
+<a [routerLink]="['/']">
+  <h1>Магазин</h1>
+</a>
+<a [routerLink]="['/cart']">
+  <h2>Корзина</h2>
+</a>
+</nav>
+<div class="toptoptop">
+  <i class="material-icons">shopping_cart</i>
+  <div class="gridtext">
+    <p style="display: block">В корзине:{{items.length}}</p>
+    <p style="display: block">На сумму:{{ summa }} руб.</p>
+  </div>
+</div>
+

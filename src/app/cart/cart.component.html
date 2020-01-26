@@ -1,0 +1,33 @@
+<h3>Корзина</h3>
+<div *ngFor="let item of items" class="cart-item">
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+</div>
+<form (ngSubmit)="onSubmit(form.value)"
+      [formGroup]="form">
+  <div>
+    <label>FullName</label>
+    <input formControlName="fullName" type="text">
+  </div>
+  <div>
+    <label>Phone</label>
+    <input formControlName="phone" type="text">
+  </div>
+  <div>
+    <label>mail</label>
+    <input formControlName="mail" type="text">
+  </div>
+  <div>
+    <label>Address</label>
+    <input formControlName="address" type="text">
+  </div>
+  <div>
+    <label>comment</label>
+    <input formControlName="comment" type="text">
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+
+</form>
+<p>{{finishDate | json}}</p>
+
